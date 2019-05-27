@@ -10,22 +10,19 @@ class RowDemo extends StatelessWidget {
       appBar: AppBar(
         title: Text("New route"),
       ),
-      body:Stack(
-        alignment:Alignment.center ,
-        fit: StackFit.expand, //未定位widget占满Stack整个空间
-        children: <Widget>[
-          Positioned(
-            left: 18.0,
-            child: Text("I am Jack"),
+      body:GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3, //横轴三个子widget
+              childAspectRatio: 1.0 //宽高比为1时，子widget
           ),
-          Container(child: Text("Hello world",style: TextStyle(color: Colors.white)),
-            color: Colors.red,
-          ),
-          Positioned(
-            top: 18.0,
-            child: Text("Your friend"),
-          )
-        ],
+          children:<Widget>[
+            Icon(Icons.ac_unit),
+            Icon(Icons.airport_shuttle),
+            Icon(Icons.all_inclusive),
+            Icon(Icons.beach_access),
+            Icon(Icons.cake),
+            Icon(Icons.free_breakfast)
+          ]
       ),
     );
   }

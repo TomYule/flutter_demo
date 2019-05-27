@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'FlexLayoutTestRoute.dart';
 import 'FormTestRoute.dart';
+import 'CustomScrollViewTestRoute.dart';
+import 'ListView3.dart';
 import 'RowDemo.dart';
 import 'TestFlowDelegate.dart';
 
@@ -32,7 +34,9 @@ class MyApp extends StatelessWidget {
         //RowDemo
         "rowDemo":(context)=>RowDemo(),
         //FlexLayoutTestRoute
-        "flexLayoutTestRoute":(context)=>FlexLayoutTestRoute(),
+        "customScrollViewTestRoute":(context)=>CustomScrollViewTestRoute(),
+
+        "listView3":(context)=>ListView3(),
       } ,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -140,12 +144,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             //flexLayoutTestRoute
             FlatButton(
-              child: Text("flexLayoutTestRoute Demo"),
+              child: Text("customScrollViewTestRoute Demo"),
               textColor: Colors.blue,
               onPressed: () {
                 //导航到新路由
-//                Navigator.pushNamed(context, "new_page");
-                Navigator.of(context).pushNamed("flexLayoutTestRoute", arguments: "hi");
+                Navigator.pushNamed(context, "customScrollViewTestRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
                 //Navigator.push(context,
                 //  new MaterialPageRoute(builder: (context) {
                 //  return new NewRoute();
