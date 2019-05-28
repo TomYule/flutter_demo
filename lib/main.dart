@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'FlexLayoutTestRoute.dart';
-import 'FormTestRoute.dart';
-import 'CustomScrollViewTestRoute.dart';
-import 'ListView3.dart';
+import 'package:flutter_demo/route/CustomPaintRoute.dart';
+import 'package:flutter_demo/route/FileOperationRoute.dart';
+import 'package:flutter_demo/route/FormTestRoute.dart';
+import 'package:flutter_demo/route/CustomScrollViewTestRoute.dart';
+import 'package:flutter_demo/route/GestureDetectorTestRoute.dart';
+import 'package:flutter_demo/route/GradientButtonRoute.dart';
+import 'package:flutter_demo/route/GradientCircularProgressRoute.dart';
+import 'package:flutter_demo/route/HttpTestRoute.dart';
+import 'package:flutter_demo/route/InheritedWidgetTestRoute.dart';
+import 'package:flutter_demo/route/NotificationRoute.dart';
 import 'RowDemo.dart';
-import 'TestFlowDelegate.dart';
+import 'package:flutter_demo/route/ScaleAnimationRoute.dart';
+import 'package:flutter_demo/route/ScrollControllerTestRoute.dart';
+import 'StaggerDemo.dart';
+import 'package:flutter_demo/route/ThemeTestRoute.dart';
+import 'package:flutter_demo/route/TurnBoxRoute.dart';
+import 'package:flutter_demo/route/WillPopScopeTestRoute.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,7 +47,21 @@ class MyApp extends StatelessWidget {
         //FlexLayoutTestRoute
         "customScrollViewTestRoute":(context)=>CustomScrollViewTestRoute(),
 
-        "listView3":(context)=>ListView3(),
+        "scrollControllerTestRoute":(context)=>ScrollControllerTestRoute(),
+        "willPopScopeTestRoute":(context)=>WillPopScopeTestRoute(),
+        "inheritedWidgetTestRoute":(context)=>InheritedWidgetTestRoute(),
+        "gestureDetectorTestRoute":(context)=>GestureDetectorTestRoute(),
+        "themeTestRoute":(context)=>ThemeTestRoute(),
+        "notificationRoute":(context)=>NotificationRoute(),
+        "scaleAnimationRoute":(context)=>ScaleAnimationRoute(),
+        "staggerDemo":(context)=>StaggerDemo(),
+        "gradientButton":(context)=>GradientButtonRoute(),
+        "turnBoxRoute":(context)=>TurnBoxRoute(),
+        "customPaintRoute":(context)=>CustomPaintRoute(),
+        "gradientCircularProgressRoute":(context)=>GradientCircularProgressRoute(),
+        "fileOperationRoute":(context)=>FileOperationRoute(),
+        "httpTestRoute":(context)=>HttpTestRoute(),
+
       } ,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -142,13 +167,181 @@ class _MyHomePageState extends State<MyHomePage> {
                 //}));
               },
             ),
-            //flexLayoutTestRoute
             FlatButton(
               child: Text("customScrollViewTestRoute Demo"),
               textColor: Colors.blue,
               onPressed: () {
                 //导航到新路由
                 Navigator.pushNamed(context, "customScrollViewTestRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //scrollControllerTestRoute
+            FlatButton(
+              child: Text("scrollControllerTestRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "scrollControllerTestRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //inheritedWidgetTestRoute
+            FlatButton(
+              child: Text("inheritedWidgetTestRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "inheritedWidgetTestRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //themeTestRoute
+            FlatButton(
+              child: Text("themeTestRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "themeTestRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //notificationRoute
+            FlatButton(
+              child: Text("notificationRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "notificationRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+
+            //scaleAnimationRoute
+            FlatButton(
+              child: Text("scaleAnimationRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "scaleAnimationRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //heroAnimationRoute
+            FlatButton(
+              child: Text("staggerDemo Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "staggerDemo");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //gradientButton
+            FlatButton(
+              child: Text("gradientButton Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "gradientButton");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //turnBoxRoute
+            FlatButton(
+              child: Text("turnBoxRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "turnBoxRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //CustomPaintRoute
+            FlatButton(
+              child: Text("CustomPaintRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "customPaintRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //gradientCircularProgressRoute
+            FlatButton(
+              child: Text("gradientCircularProgressRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "gradientCircularProgressRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //fileOperationRoute
+            FlatButton(
+              child: Text("fileOperationRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "fileOperationRoute");
+//                Navigator.of(context).pushNamed("listView3", arguments: "hi");
+                //Navigator.push(context,
+                //  new MaterialPageRoute(builder: (context) {
+                //  return new NewRoute();
+                //}));
+              },
+            ),
+            //httpTestRoute
+            FlatButton(
+              child: Text("httpTestRoute Demo"),
+              textColor: Colors.blue,
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, "httpTestRoute");
 //                Navigator.of(context).pushNamed("listView3", arguments: "hi");
                 //Navigator.push(context,
                 //  new MaterialPageRoute(builder: (context) {
